@@ -43,7 +43,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6ECFF66180F7B89318CD1E67 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C3FA341E92ACBECB02705106 /* Pods_Keyboard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keyboard_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6179A363C45F8578704ED09 /* Keyboard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Keyboard.podspec; path = ../Keyboard.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C6179A363C45F8578704ED09 /* KeyboardSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KeyboardSwift.podspec; path = ../KeyboardSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E90D23599BF0AF92D406C238 /* Pods_Keyboard_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Keyboard_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9691976C3CA16790B0261E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FF309B662E8D3AC211DD92A8 /* Pods-Keyboard_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Keyboard_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Keyboard_Tests/Pods-Keyboard_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				C6179A363C45F8578704ED09 /* Keyboard.podspec */,
+				C6179A363C45F8578704ED09 /* KeyboardSwift.podspec */,
 				6ECFF66180F7B89318CD1E67 /* README.md */,
 				EA9691976C3CA16790B0261E /* LICENSE */,
 			);
