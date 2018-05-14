@@ -24,11 +24,11 @@ public extension Keyboard where Base: UIView {
         set { objc_setAssociatedObject(base, &type(of: base).AssociatedKeys.keyboardToolbar, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
     }
     
-    func buildAccesoryView(with items: KeyboardItem...) {
+    internal func buildAccesoryView(with items: KeyboardItem...) {
         return buildAccesoryView(with: items)
     }
     
-    func buildAccesoryView(with items: [KeyboardItem]) {
+    internal func buildAccesoryView(with items: [KeyboardItem]) {
         if keyboardToolbar == nil {
             keyboardToolbar = UIToolbar()
             keyboardToolbar?.sizeToFit()
