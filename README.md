@@ -1,6 +1,5 @@
 # Keyboard
 
-[![CI Status](https://img.shields.io/travis/adboco@telefonica.net/Keyboard.svg?style=flat)](https://travis-ci.org/adboco@telefonica.net/Keyboard)
 [![Version](https://img.shields.io/cocoapods/v/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
 [![License](https://img.shields.io/cocoapods/l/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
 [![Platform](https://img.shields.io/cocoapods/p/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
@@ -22,7 +21,7 @@ pod 'Keyboard'
 
 ## Author
 
-adboco@telefonica.net, abouza@Adrián Bouza Correa.com
+adboco@telefonica.net, Adrián Bouza Correa
 
 ## License
 
