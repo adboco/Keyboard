@@ -1,9 +1,9 @@
 # Keyboard
 
-[![Version](https://img.shields.io/cocoapods/v/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
-[![License](https://img.shields.io/cocoapods/l/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
-[![Platform](https://img.shields.io/cocoapods/p/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
-[![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)](https://cocoapods.org/pods/Keyboard)
+[![Version](https://img.shields.io/cocoapods/v/KeyboardSwift.svg?style=flat)](https://cocoapods.org/pods/KeyboardSwift)
+[![License](https://img.shields.io/cocoapods/l/KeyboardSwift.svg?style=flat)](https://cocoapods.org/pods/KeyboardSwift)
+[![Platform](https://img.shields.io/cocoapods/p/KeyboardSwift.svg?style=flat)](https://cocoapods.org/pods/KeyboardSwift)
+[![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)](https://cocoapods.org/pods/KeyboardSwift)
 
 ## Example
 
@@ -20,7 +20,7 @@ Keyboard is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Keyboard'
+pod 'KeyboardSwift'
 ```
 
 ## Usage

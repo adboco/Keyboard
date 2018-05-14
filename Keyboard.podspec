@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Keyboard'
+  s.name             = 'KeyboardSwift'
   s.version          = '0.1.0'
   s.summary          = 'Keyboard makes easy to use inputAccessoryView in UIViewController, UITextView, UITextField and UISearchBar.'
 
