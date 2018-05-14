@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
 [![License](https://img.shields.io/cocoapods/l/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
 [![Platform](https://img.shields.io/cocoapods/p/Keyboard.svg?style=flat)](https://cocoapods.org/pods/Keyboard)
+[![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)](https://cocoapods.org/pods/Keyboard)
 
 ## Example
 

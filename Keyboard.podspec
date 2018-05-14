@@ -28,6 +28,7 @@ Keyboard makes easy to use inputAccessoryView in UIViewController, UITextView, U
   s.social_media_url = 'https://instagram.com/adboco'
 
   s.ios.deployment_target = '8.0'
+  s.swift_version = '4.1'
 
   s.source_files = 'Keyboard/Classes/**/*'
   
