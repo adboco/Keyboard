@@ -42,7 +42,7 @@ let doneItem = KeyboardItem.barButton(title: "Done", style: .done) { _ in
 textView.keyboard.with(items: cancelItem, .flexibleSpace, labelItem, .flexibleSpace, doneItem)
 ```
 
-[keyboard1](https://github.com/adboco/Keyboard/blob/master/Assets/keyboard1.png)
+![alt text](https://github.com/adboco/Keyboard/blob/master/Assets/keyboard1.png "Keyboard")
 
 ### KeyboardItem
 
@@ -68,7 +68,7 @@ case custom(view: UIView)
 You can customize the accessoryView made by Keyboard calling 'customize' method:
 
 ```swift
-textView.customize { (toolbar, items) in
+textView.keyboard.customize { (toolbar, items) in
     toolbar.isTranslucent = false
     toolbar.tintColor = .purple
 }
@@ -88,13 +88,19 @@ case didHide
 Example:
 
 ```swift
-// Subscribe
-keyboard.subscribe(to: .willShow) { sender in
-    // TODO: something to do when keyboard will be shown
-}
+override func viewDidLoad() {
+	super.viewDidLoad()
 
-// Unsubscribe
-keyboard.unsubscribe()
+	// Subscribe
+	self.keyboard.subscribe(to: .willShow) { sender in
+	    // TODO: something to do when keyboard will be shown
+	}
+
+	// ...
+
+	// Unsubscribe
+	self.keyboard.unsubscribe()
+}
 ```
 
 ## Author
