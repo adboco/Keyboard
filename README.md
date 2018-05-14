@@ -24,10 +24,11 @@ pod 'Keyboard'
 
 ## Usage
 
-You can use Keyboard in UIViewController or any UIView with inputAccessoryView (UITextField, UISearchBar, UITextView). Simply call 'keyboard' and configure it with the items you want. An example:
+You can use Keyboard in ``UIViewController`` or any ``UIView`` with ``inputAccessoryView`` (``UITextField``, ``UISearchBar``, ``UITextView``). Simply call ``keyboard`` and configure it with the items you want. An example:
 
 ```swift
-let cancelItem = KeyboardItem.barButton(title: "Cancel", style: .plain) { _ in
+let cancelItem = KeyboardItem.barButton(title: "Cancel", style: .plain) { item in
+	// Called when cancel item is tapped
     self.textView.endEditing(true)
 }
 
@@ -35,7 +36,8 @@ let countLabel = UILabel()
 countLabel.text = "0"
 let labelItem = KeyboardItem.custom(view: countLabel)
 
-let doneItem = KeyboardItem.barButton(title: "Done", style: .done) { _ in
+let doneItem = KeyboardItem.barButton(title: "Done", style: .done) { item in
+	// Called when done item is tapped
     self.textView.endEditing(true)
 }
 
@@ -65,7 +67,7 @@ case custom(view: UIView)
 
 ### Customize
 
-You can customize the accessoryView made by Keyboard calling 'customize' method:
+You can customize the ``accessoryView`` calling ``customize`` method:
 
 ```swift
 textView.keyboard.customize { (toolbar, items) in
@@ -76,7 +78,7 @@ textView.keyboard.customize { (toolbar, items) in
 
 ### Keyboard Events
 
-Only available in ``UIViewController``:
+Only available in ``UIViewController`` or subclass:
 
 ```swift
 case willShow
