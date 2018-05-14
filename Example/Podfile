@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'Keyboard_Example' do
   pod 'Keyboard', :path => '../'
+  pod 'SnapKit'
 
   target 'Keyboard_Tests' do
     inherit! :search_paths

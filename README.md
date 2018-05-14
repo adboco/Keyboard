@@ -22,7 +22,7 @@ pod 'Keyboard'
 
 ## Author
 
-adboco@telefonica.net, abouza@mobincube.com
+adboco@telefonica.net, abouza@Adrián Bouza Correa.com
 
 ## License
 
