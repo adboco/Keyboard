@@ -32,6 +32,7 @@ let cancelItem = KeyboardItem.barButton(title: "Cancel", style: .plain) { _ in
 }
 
 let countLabel = UILabel()
+countLabel.text = "0"
 let labelItem = KeyboardItem.custom(view: countLabel)
 
 let doneItem = KeyboardItem.barButton(title: "Done", style: .done) { _ in
@@ -41,7 +42,9 @@ let doneItem = KeyboardItem.barButton(title: "Done", style: .done) { _ in
 textView.keyboard.with(items: cancelItem, .flexibleSpace, labelItem, .flexibleSpace, doneItem)
 ```
 
-## KeyboardItem
+[keyboard1](https://github.com/adboco/Keyboard/blob/master/Assets/keyboard1.png)
+
+### KeyboardItem
 
 ```swift
 /// Default bar button item
@@ -60,7 +63,7 @@ case fixedSpace(width: CGFloat)
 case custom(view: UIView)
 ```
 
-## Customize
+### Customize
 
 You can customize the accessoryView made by Keyboard calling 'customize' method:
 
@@ -71,14 +74,27 @@ textView.customize { (toolbar, items) in
 }
 ```
 
-## Keyboard Events
+### Keyboard Events
 
 Only available in ``UIViewController``:
 
 ```swift
+case willShow
+case willHide
+case didShow
+case didHide
+```
+
+Example:
+
+```swift
+// Subscribe
 keyboard.subscribe(to: .willShow) { sender in
     // TODO: something to do when keyboard will be shown
 }
+
+// Unsubscribe
+keyboard.unsubscribe()
 ```
 
 ## Author
