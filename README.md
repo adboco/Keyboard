@@ -26,7 +26,7 @@ pod 'KeyboardSwift'
 ## Usage
 
 ```swift
-import Keyboard
+import KeyboardSwift
 ```
 
 You can use Keyboard in ``UIViewController`` or any ``UIView`` with ``inputAccessoryView`` (``UITextField``, ``UISearchBar``, ``UITextView``). Simply call ``keyboard`` and configure it with the items you want. An example:
