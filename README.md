@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/KeyboardSwift.svg?style=flat)](https://cocoapods.org/pods/KeyboardSwift)
 [![Platform](https://img.shields.io/cocoapods/p/KeyboardSwift.svg?style=flat)](https://cocoapods.org/pods/KeyboardSwift)
 [![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg)](https://cocoapods.org/pods/KeyboardSwift)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fadboco%2FKeyboard.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fadboco%2FKeyboard?ref=badge_shield)
 
 ## Example
 
@@ -117,3 +118,6 @@ adboco@telefonica.net, Adrián Bouza Correa
 ## License
 
 Keyboard is available under the MIT license. See the LICENSE file for more info.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fadboco%2FKeyboard.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fadboco%2FKeyboard?ref=badge_large)
