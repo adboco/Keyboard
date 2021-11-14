@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import Keyboard
+import KeyboardSwift
 
 class ViewController: UIViewController {
     

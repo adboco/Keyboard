@@ -45,7 +45,7 @@ public extension Keyboard where Base: UIView {
     
     // MARK: - Customization
     
-    public func customize(_ block: KeyboardCustomizeBlock) {
+    func customize(_ block: KeyboardCustomizeBlock) {
         guard let toolbar = keyboardToolbar else {
             return
         }

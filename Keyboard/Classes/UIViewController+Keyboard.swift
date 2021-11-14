@@ -73,7 +73,7 @@ public extension Keyboard where Base: UIViewController {
     
     // MARK: - Keyboard Events
     
-    public func subscribe(to events: KeyboardEvent..., action: KeyboardEventBlock?) {
+    func subscribe(to events: KeyboardEvent..., action: KeyboardEventBlock?) {
         for event in events {
             switch event {
             case .willShow:
@@ -92,7 +92,7 @@ public extension Keyboard where Base: UIViewController {
         }
     }
     
-    public func unsubscribe(from events: KeyboardEvent...) {
+    func unsubscribe(from events: KeyboardEvent...) {
         if events.isEmpty {
             unsubscribe()
         } else {
@@ -147,7 +147,7 @@ public extension Keyboard where Base: UIViewController {
     
     // MARK: - Customization
     
-    public func customize(_ block: KeyboardCustomizeBlock) {
+    func customize(_ block: KeyboardCustomizeBlock) {
         guard let toolbar = keyboardToolbar else {
             return
         }
@@ -158,12 +158,12 @@ public extension Keyboard where Base: UIViewController {
     
     // MARK: - Building
     
-    public func with(items: KeyboardItem...) -> Self {
+    func with(items: KeyboardItem...) -> Self {
         return self.with(items: items)
     }
     
-    public func with(items: [KeyboardItem]) -> Self {
-        _ = buildAccesoryView(with: items)
+    func with(items: [KeyboardItem]) -> Self {
+        buildAccesoryView(with: items)
         return self
     }
     
