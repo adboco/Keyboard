@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import Keyboard
+import KeyboardSwift
 
 class ViewController: UIViewController {
     
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         keyboard.subscribe(to: .willShow) { sender in
             let userInfo = sender.userInfo!
             var keyboardHeight: CGFloat = 150
-            if let frameValue = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            if let frameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
                 keyboardHeight = frameValue.cgRectValue.height
             }
             DispatchQueue.main.async {

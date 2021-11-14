@@ -1,13 +1,11 @@
+platform :ios, '12.0'
 use_frameworks!
 
 target 'Keyboard_Example' do
-  pod 'Keyboard', :path => '../'
+  pod 'KeyboardSwift', :path => '../'
   pod 'SnapKit'
 
   target 'Keyboard_Tests' do
     inherit! :search_paths
-
-    pod 'Quick', '~> 1.2.0'
-    pod 'Nimble', '~> 7.0.2'
   end
 end

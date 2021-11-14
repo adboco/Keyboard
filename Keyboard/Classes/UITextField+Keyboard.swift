@@ -9,11 +9,11 @@ import UIKit
 
 public extension Keyboard where Base: UITextField {
     
-    public func with(items: KeyboardItem...) -> Self {
+    func with(items: KeyboardItem...) -> Self {
         return self.with(items: items)
     }
     
-    public func with(items: [KeyboardItem]) -> Self {
+    func with(items: [KeyboardItem]) -> Self {
         buildAccesoryView(with: items)
         base.inputAccessoryView = keyboardToolbar
         return self

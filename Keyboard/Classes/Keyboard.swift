@@ -28,7 +28,7 @@ public protocol KeyboardCompatible {
 
 public extension KeyboardCompatible {
     
-    public var keyboard: Keyboard<Self> {
+    var keyboard: Keyboard<Self> {
         get { return Keyboard(self) }
         set { }
     }

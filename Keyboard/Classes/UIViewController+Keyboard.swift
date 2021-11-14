@@ -73,26 +73,26 @@ public extension Keyboard where Base: UIViewController {
     
     // MARK: - Keyboard Events
     
-    public func subscribe(to events: KeyboardEvent..., action: KeyboardEventBlock?) {
+    func subscribe(to events: KeyboardEvent..., action: KeyboardEventBlock?) {
         for event in events {
             switch event {
             case .willShow:
                 base.willShow = action
-                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardWillShow(sender:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
             case .willHide:
                 base.willHide = action
-                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardWillHide(sender:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil)
             case .didShow:
                 base.didShow = action
-                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardDidShow(sender:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardDidShow(sender:)), name: UIResponder.keyboardDidShowNotification, object: nil)
             case .didHide:
                 base.didHide = action
-                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardDidHide(sender:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardDidHide(sender:)), name: UIResponder.keyboardDidHideNotification, object: nil)
             }
         }
     }
     
-    public func unsubscribe(from events: KeyboardEvent...) {
+    func unsubscribe(from events: KeyboardEvent...) {
         if events.isEmpty {
             unsubscribe()
         } else {
@@ -105,16 +105,16 @@ public extension Keyboard where Base: UIViewController {
             switch event {
             case .willShow:
                 base.willShow = nil
-                NotificationCenter.default.removeObserver(base, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+                NotificationCenter.default.removeObserver(base, name: UIResponder.keyboardWillShowNotification, object: nil)
             case .willHide:
                 base.willHide = nil
-                NotificationCenter.default.removeObserver(base, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+                NotificationCenter.default.removeObserver(base, name: UIResponder.keyboardWillHideNotification, object: nil)
             case .didShow:
                 base.didShow = nil
-                NotificationCenter.default.removeObserver(base, name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+                NotificationCenter.default.removeObserver(base, name: UIResponder.keyboardDidShowNotification, object: nil)
             case .didHide:
                 base.didHide = nil
-                NotificationCenter.default.removeObserver(base, name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+                NotificationCenter.default.removeObserver(base, name: UIResponder.keyboardDidHideNotification, object: nil)
             }
         }
     }
@@ -132,7 +132,7 @@ public extension Keyboard where Base: UIViewController {
     
     internal func buildAccesoryView(with items: [KeyboardItem]) {
         if keyboardToolbar == nil {
-            keyboardToolbar = UIToolbar()
+            keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: base.view.bounds.width, height: 0))
             keyboardToolbar?.sizeToFit()
         }
         var toolbarItems: [UIBarButtonItem] = []
@@ -147,7 +147,7 @@ public extension Keyboard where Base: UIViewController {
     
     // MARK: - Customization
     
-    public func customize(_ block: KeyboardCustomizeBlock) {
+    func customize(_ block: KeyboardCustomizeBlock) {
         guard let toolbar = keyboardToolbar else {
             return
         }
@@ -158,12 +158,12 @@ public extension Keyboard where Base: UIViewController {
     
     // MARK: - Building
     
-    public func with(items: KeyboardItem...) -> Self {
+    func with(items: KeyboardItem...) -> Self {
         return self.with(items: items)
     }
     
-    public func with(items: [KeyboardItem]) -> Self {
-        _ = buildAccesoryView(with: items)
+    func with(items: [KeyboardItem]) -> Self {
+        buildAccesoryView(with: items)
         return self
     }
     
