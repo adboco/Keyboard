@@ -30,7 +30,7 @@ public extension Keyboard where Base: UIView {
     
     internal func buildAccesoryView(with items: [KeyboardItem]) {
         if keyboardToolbar == nil {
-            keyboardToolbar = UIToolbar()
+            keyboardToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: base.bounds.width, height: 0))
             keyboardToolbar?.sizeToFit()
         }
         var toolbarItems: [UIBarButtonItem] = []
