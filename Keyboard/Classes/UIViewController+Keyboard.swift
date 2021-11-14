@@ -78,16 +78,16 @@ public extension Keyboard where Base: UIViewController {
             switch event {
             case .willShow:
                 base.willShow = action
-                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardWillShow(sender:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
             case .willHide:
                 base.willHide = action
-                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardWillHide(sender:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil)
             case .didShow:
                 base.didShow = action
-                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardDidShow(sender:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardDidShow(sender:)), name: UIResponder.keyboardDidShowNotification, object: nil)
             case .didHide:
                 base.didHide = action
-                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardDidHide(sender:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+                NotificationCenter.default.addObserver(base, selector: #selector(UIViewController.kb_keyboardDidHide(sender:)), name: UIResponder.keyboardDidHideNotification, object: nil)
             }
         }
     }
@@ -105,16 +105,16 @@ public extension Keyboard where Base: UIViewController {
             switch event {
             case .willShow:
                 base.willShow = nil
-                NotificationCenter.default.removeObserver(base, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+                NotificationCenter.default.removeObserver(base, name: UIResponder.keyboardWillShowNotification, object: nil)
             case .willHide:
                 base.willHide = nil
-                NotificationCenter.default.removeObserver(base, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+                NotificationCenter.default.removeObserver(base, name: UIResponder.keyboardWillHideNotification, object: nil)
             case .didShow:
                 base.didShow = nil
-                NotificationCenter.default.removeObserver(base, name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+                NotificationCenter.default.removeObserver(base, name: UIResponder.keyboardDidShowNotification, object: nil)
             case .didHide:
                 base.didHide = nil
-                NotificationCenter.default.removeObserver(base, name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+                NotificationCenter.default.removeObserver(base, name: UIResponder.keyboardDidHideNotification, object: nil)
             }
         }
     }

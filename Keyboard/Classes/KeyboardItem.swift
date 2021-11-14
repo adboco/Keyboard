@@ -9,8 +9,8 @@ import UIKit
 
 public enum KeyboardItem {
     
-    case barButton(title: String, style: UIBarButtonItemStyle, action: UIBarButtonItemTargetClosure?)
-    case systemBarButton(system: UIBarButtonSystemItem, action: UIBarButtonItemTargetClosure?)
+    case barButton(title: String, style: UIBarButtonItem.Style, action: UIBarButtonItemTargetClosure?)
+    case systemBarButton(system: UIBarButtonItem.SystemItem, action: UIBarButtonItemTargetClosure?)
     case flexibleSpace
     case fixedSpace(width: CGFloat)
     case custom(view: UIView)
