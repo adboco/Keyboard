@@ -1,5 +1,5 @@
 PODS:
-  - KeyboardSwift (0.1.3)
+  - KeyboardSwift (0.1.4)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KeyboardSwift: f7cd5fd8966619b19b78252082577f4e915a0dcc
+  KeyboardSwift: c1f98fff96d7ded98a8c803fa5a118d0a60f99ce
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
 PODFILE CHECKSUM: 4e1b0f303eb4d49eb41952ee74d1c7fe74e5bc8d
